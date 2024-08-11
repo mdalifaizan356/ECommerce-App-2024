@@ -1,3 +1,5 @@
 # dependencies
 /node_modules
 /ECOMMERCE-APP-2024/node_modules
+
+.env
