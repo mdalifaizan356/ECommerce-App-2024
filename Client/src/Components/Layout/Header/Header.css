@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Garamond (serif);
+}
+
+.headerContainer {
+  /* border: 2px solid black; */
+  width: 100%;
+}
+
+.headerBox {
+  /* border: 2px solid gray; */
+  width: 100%;
+  /* background-color: #d1ccc0; */
+  box-shadow: 0px 2px 5px gray;
+}
+
+.newsBar {
+  /* border: 2px solid yellow; */
+  background-color: #080533;
+  /* box-shadow: 0px 2px 2px gray; */
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.newsBar :nth-child(1) {
+  background-color: crimson;
+  width: 10%;
+  text-align: center;
+}
+.newsBar :nth-child(2) {
+  /* background-color: blue; */
+  width: 70%;
+}
+
+.contactBar {
+  /* border: 2px solid red; */
+  background-color: crimson;
+  width: 100%;
+  /* margin-top: 15px; */
+  display: flex;
+  font-size: large;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding: 5px;
+}
+
+.emailLink {
+  /* border: 2px solid green; */
+  width: 20%;
+}
+
+.socialLink {
+  /* border: 2px solid green; */
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+}
+.socialLink i {
+  padding-left: 20px;
+  color: white;
+}
+
+.logoANDLogin {
+  /* border: 2px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  /* border: 2px solid green; */
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.logo img {
+  /* border: 2px solid green; */
+  width: 20%;
+}
+.login {
+  /* border: 2px solid green; */
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.PhIcon i {
+  /* border: 2px solid blue; */
+  font-size: 40px;
+  margin-right: 15px;
+  color: crimson;
+}
+.PhNo {
+  /* border: 2px solid blue; */
+  font-size: 15px;
+  margin-right: 15px;
+}
+.LoginBtn {
+  /* border: 2px solid blue; */
+  margin-right: 15px;
+  width: 15%;
+}
+.LoginBtn button {
+  background-color: crimson;
+  border: 1px solid crimson;
+  border-radius: 15px;
+  padding: 10%;
+  width: 100%;
+}
+
+.navContainer {
+  /* border: 2px solid red; */
+  width: 100%;
+}
+#nav {
+  /* border: 2px solid yellow; */
+  width: 90%;
+  margin: auto;
+}
+#nav > ul {
+  background-color: white;
+}
+#nav ul {
+  list-style: none;
+  position: relative;
+  /* margin: 0; */
+  /* padding: 0; */
+  /* float: left; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav ul a {
+  color: crimson;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 32px;
+  padding: 0 15px;
+  display: block;
+}
+
+#nav ul li {
+  float: left;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+#nav ul li:hover {
+  background-color: white;
+  /* color: black; */
+}
+
+#nav ul ul {
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+
+#nav ul ul li {
+  float: none;
+  width: 200px;
+  /* border: 1px solid black; */
+  /* width: 150% */
+}
+#nav ul ul li:hover {
+  border: 1px solid rgb(48, 44, 44);
+}
+
+#nav ul ul ul {
+  top: -5px;
+  left: 100%;
+}
+
+#nav ul li:hover > ul {
+  display: block;
+}

@@ -68,3 +68,10 @@ JWT vs Session
     JWT is stateless
     Session is statefull
 
+
+
+
+
+Client:
+
+<BrowserRouter> ki help se routing ki functionality enable hoti he.
