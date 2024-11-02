@@ -1,44 +1,15 @@
 import React from 'react'
 import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
-// import {Container, Row, Col} from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Layout = (props) => {
+const Layout = ({ children, toggleTheme, theme }) => {
   return (
     <>
-
-        <Header/>
-        <main style={{minHeight:'90vh',marginTop: "100px"}}>
-        {props.children}
-        </main>
-        <Footer/>
+      <Header toggleTheme={toggleTheme} theme={theme} />
+      <main style={{ minHeight: '90vh', marginTop: '100px' }}>
+        {children}
+      </main>
     </>
-  )
-}
+  );
+};
 
-export default Layout
-
-
-
-// <Container fluid className='bg-danger'>
-//             <Row>
-//                 <Col >
-//                     <Header/>
-//                 </Col>
-//             </Row>
-//         </Container>
-//         <Container style={{minHeight:'90vh'}}>
-//             <Row>
-//                 <Col>
-//                     {props.children}
-//                 </Col>
-//             </Row>
-//         </Container>
-//         <Container fluid className='bg-danger' >
-//             <Row>
-//                 <Col>
-//                     <Footer/>
-//                 </Col>
-//             </Row>
-//         </Container>
+export default Layout;

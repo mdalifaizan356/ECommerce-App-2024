@@ -1,0 +1,183 @@
+package.json file  is contain information about project.
+
+To get package.json file run conmmand in terminal: npm init -y OR npm init
+
+To install npm package run command in terminal: npm i packageName
+
+node_modules folder contain all dependencies
+
+package-lock-json file is automatically generated for any operations where npm modifies either the node_modules
+tree, or package.json. It describes the exact tree that was generated, such that subsequent installs are able to
+generate identical trees, regardless of intermediate dependency updates.
+
+"type":"module", add this varible and value in package.json for use ES6 module base import export.
+
+.env file use for secure application. bcoz it is contain confidentional data like port, mongodb url, json token,
+security key etc...
+
+const PORT = process.env.PORT || 8080;
+Here is use || OR operator. it means if any problem in env file related to PORT then use 8080 port or other.
+
+process by default node k sath aata he.
+
+config folder contain all configuration files like dbconnection file etc..
+
+Postman tool ko as clint use karte he api testing k liye
+
+
+JWT: JSON Web Token 
+    First thing you Know about public and private creyptography!
+    JWT work on private creyptography concept
+
+    second thing you should know about stateless statefull
+    stateless ka matlab he k iski state hum kabhi bhi database or kisi file me store kar k nahi rakhte he.
+    JWT stateless machenism he.
+    statefull ka matlab he k iski state hum database me or kisi file me store kar k rakh sakte he.
+
+    What is JWT: It is a encrypted token. Jab 2 resource apas me communicate kar rhe he or unko claim karna he k me
+    baat kar sakta hu. to usi claim machenism ko JWT bola jata he. It is long string divided in to 3 parts.
+    1st part determine that used algorithm.
+    2nd part determine information
+    3rd part determine that varifival signature
+
+    Authentication vs Authorization
+    Authentication matlab user ne khud ko varify kiya k jis user ne register kiya tha wo wahi user he.
+    Authorization matlb Authentic user ko resource access define kiye jate he like desktop login.
+
+How do you securely store a JWT on the client-side?
+    JWT Token short lived hota he.
+    Agar koi kisi ka JWT token chori kar leta he to wo uske session or cookies bhi chura sakta he.
+    
+    Protaction Machenism
+            Local storage: JWT token ko local storage me rakh sakte he. 
+            Session Storage:
+            cookies Storage:
+            Expire Fast:
+
+What are the commen use cases for JWT?
+    Use for Authentication
+    Use for Authorization
+    Use for Information Exchange
+
+How can you invalidate a JWT?
+    Determine Expire time 
+    Refresh Token: Ye ek machenism hota he. Jisme Refresh Token ko hum database me save rakhte he. or jab bhi 
+    access token expire ho jata he to hum us refresh token k threw access token ko renew karwa sakte he.
+
+JWT vs Session
+    JWT is stateless
+    Session is statefull
+
+
+
+
+
+Client:
+
+<BrowserRouter> ki help se routing ki functionality enable hoti he.
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./Header.css";
+import '../../../../public/logo.jpeg';
+
+const Header = () => {
+  const containerStyle = {
+    // position: "fixed",
+    top: "0px",
+    width: "100%",
+    backgroundColor: "#E9EED9",
+    zIndex: 1000,
+  };
+
+  return (
+    <>
+      <Container fluid style={containerStyle} className="headerContainer">
+        <Row className='headerBox'>
+          <Col className="contactBar">
+                <div className="emailLink">
+                  <a><i className="fa-solid fa-envelope"> cpbagagency@gmail.com</i></a>
+                </div>
+                <div className="socialLink">
+                    <a>Follow Us</a>
+                    <a href=""><i className="fa-brands fa-facebook"></i></a>
+                    <a href=""><i className="fa-brands fa-whatsapp"></i></a>
+                    <a href=""><i className="fa-brands fa-twitter"></i></a>
+                    <a href=""><i className="fa-brands fa-youtube"></i></a>
+                    <a href=""><i className="fa-brands fa-linkedin-in"></i></a>
+                    <a href=""><i className="fa-brands fa-instagram"></i></a>
+                    <a href=""><i className="fa-brands fa-pinterest"></i></a>
+                </div>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col className="logoANDLogin">
+                <div className="logo">
+                <img src="/logo.jpeg" alt="logo" />
+                    <h1>CP BagEgency</h1>
+                </div>
+                <div className="login">
+                    <div className="PhIcon">
+                        <i className="fa-solid fa-phone"></i>
+                    </div>
+                    <div className="PhNo">
+                        <h4>+91 9887370536</h4>
+                    </div>
+                    <div className="LoginBtn">
+                        <button>
+                            <a href="./Common/Ragistration.php">
+                                Enter
+                                <i className="fa-solid fa-right-to-bracket"></i>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+          <div className="navContainer">
+                <nav id="nav">
+                <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Course</a></li>
+                        <li><a href="">Admission</a></li>
+                        <li>
+                            <a href="#">Exam</a>
+                            <ul>
+                                <li><a href="">Time Table</a></li>
+                                <li><a href="">Result</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Academics</a>
+                            <ul>
+                                <li><a href="">Principal Message</a></li>
+                                <li><a href="">Approach</a></li>
+                                <li><a href="">Facilities</a></li>
+                                <li><a href="">School Uniform</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Gallery</a></li>
+                        <li><a href="">Events   </a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </>
+  );
+}
+
+export default Header;
+
+
+
+

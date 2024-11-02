@@ -4,58 +4,50 @@
   box-sizing: border-box;
 }
 body {
-  font-family: Garamond (serif);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .headerContainer {
   /* border: 2px solid black; */
   width: 100%;
+  box-shadow: 5px 4px 10px 2px rgba(77, 73, 73, 0.2);
+  
 }
 
 .headerBox {
   /* border: 2px solid gray; */
-  width: 100%;
-  /* background-color: #d1ccc0; */
-  box-shadow: 0px 2px 5px gray;
-}
-
-.newsBar {
-  /* border: 2px solid yellow; */
-  background-color: #080533;
-  /* box-shadow: 0px 2px 2px gray; */
-  width: 100%;
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: white;
-}
-.newsBar :nth-child(1) {
-  background-color: crimson;
-  width: 10%;
-  text-align: center;
-}
-.newsBar :nth-child(2) {
-  /* background-color: blue; */
-  width: 70%;
+  /* width: 100%; */
+  background-color: #383630;
+  box-shadow: 0px 2px 5px rgb(68, 65, 65);
 }
 
 .contactBar {
   /* border: 2px solid red; */
-  background-color: crimson;
+  background-color: 54473F;
   width: 100%;
   /* margin-top: 15px; */
   display: flex;
-  font-size: large;
+  font-size:small;
   justify-content: space-around;
   align-items: center;
   color: white;
   padding: 5px;
+  
 }
+.contactBar h4{
+    font-size:small;
 
+}
 .emailLink {
   /* border: 2px solid green; */
-  width: 20%;
+  width: 40%;
+  color: white;
+}
+
+.emailLink i {
+  padding-left: 15px;
+  color: white;
+  
 }
 
 .socialLink {
@@ -65,7 +57,7 @@ body {
   justify-content: flex-end;
 }
 .socialLink i {
-  padding-left: 20px;
+  padding-left: 15px;
   color: white;
 }
 
@@ -87,22 +79,23 @@ body {
 .logo img {
   /* border: 2px solid green; */
   width: 20%;
+  border-radius: 50px;
 }
 .login {
   /* border: 2px solid green; */
-  width: 50%;
+  width: 60%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 .PhIcon i {
-  /* border: 2px solid blue; */
-  font-size: 40px;
+  border: 2px solid blue;
+  font-size: 30px;
   margin-right: 15px;
   color: crimson;
 }
 .PhNo {
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
   font-size: 15px;
   margin-right: 15px;
 }
@@ -110,10 +103,11 @@ body {
   /* border: 2px solid blue; */
   margin-right: 15px;
   width: 15%;
+  padding: 5px;
 }
 .LoginBtn button {
+  border: 1px solid rgb(55, 182, 55);
   background-color: crimson;
-  border: 1px solid crimson;
   border-radius: 15px;
   padding: 10%;
   width: 100%;
@@ -122,11 +116,17 @@ body {
 .navContainer {
   /* border: 2px solid red; */
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+
 }
 #nav {
   /* border: 2px solid yellow; */
-  width: 90%;
-  margin: auto;
+  width: 50%;
+  
 }
 #nav > ul {
   background-color: white;
@@ -138,7 +138,7 @@ body {
   /* padding: 0; */
   /* float: left; */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 #nav ul a {
@@ -187,4 +187,172 @@ body {
 
 #nav ul li:hover > ul {
   display: block;
+}
+
+
+
+
+
+@media (max-width: 970px) {
+
+  #nav {
+    /* border: 2px solid yellow; */
+    width: 100%;
+  }
+
+  #nav ul a {
+    color:crimson;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 32px;
+    padding: 0 5px;
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 525px) {
+  .emailLink {
+   display: none;
+  }
+
+  .socialLink {
+    /* border: 2px solid green; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .socialLink a {
+    color: white;
+  }
+
+  .logo img {
+    display: none;
+  }
+  .logo h1 {
+    font-size: medium;
+    color:#9b4111;
+  }
+
+  .PhIcon i {
+    display: none;
+  }
+  .PhNo {
+    display: none;
+  }
+
+  .LoginBtn {
+    /* border: 2px solid blue; */
+    margin-right: 15px;
+    width: 60%;
+  }
+  .LoginBtn button {
+    /* border: 1px solid crimson; */
+    background-color: #9b4111;
+    border-radius: 15px;
+    padding: 5%;
+    width: 100%;
+  }
+
+  #nav {
+    /* border: 2px solid red; */
+    width: 100%;
+  }
+  
+
+  #nav ul a {
+    color:crimson;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 32px;
+    padding: 0 5px;
+    display: block;
+  }
+}
+
+
+@media (max-width: 314px) {
+  body{
+    display: none;
+  }
 }

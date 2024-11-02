@@ -1,13 +1,12 @@
 import React from 'react'
 import Layout from './../../Components/Layout/Layout/Layout';
 
-
-const Home = () => {
+const Home = ({ toggleTheme, theme }) => {
   return (
-    <Layout>
-        <div>Home</div>
+    <Layout toggleTheme={toggleTheme} theme={theme}>
+      <div>Home</div>
     </Layout>
-  )
+  );
 }
 
-export default Home
+export default Home;
