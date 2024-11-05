@@ -1,0 +1,28 @@
+.Container-Style{
+    display: 'flex';
+    justify-Content: 'center';
+    align-items: 'center';
+    flex-wrap: nowrap;
+    height: '100px';
+    /* border: '1px solid red'; */
+  };
+
+/* .Row-Style{
+    
+} */
+.Col-Style{
+display: 'flex';
+justify-Content: 'center';
+align-items: 'center';
+width:50%;
+height: '100px';
+border: '1px solid red';
+};
+
+.fixed-col {
+  position: fixed; /* Position ko fixed karne ke liye */
+  top: 10px; /* Aapke desired position par set karein */
+  left: 10px; /* Ya right: 10px, agar right side chahiye */
+  width: 200px; /* Fixed width set karein, agar zaroori ho */
+  z-index: 1000; /* Ensure karein ki fixed element sabse upar ho */
+}

@@ -53,7 +53,7 @@ const Header = ({ toggleTheme, theme }) => {
           <Nav>
           <NavDropdown title={<>Account<IoEnterOutline /></>} id="navbarScrollingDropdown">
                   <NavDropdown.Item as={Link} to="/signup">Sign in</NavDropdown.Item>
-                  <NavDropdown.Item as={Link} to="/signup" href="#action3">New Customer?</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/registration" href="#action3">New Customer?</NavDropdown.Item>
                 </NavDropdown>
               </Nav>  
           </Col>
