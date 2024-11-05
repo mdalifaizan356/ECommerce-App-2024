@@ -2,10 +2,9 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import Loader from "../../Components/Loader/Loader"
-import Layout from './../../Components/Layout/Layout/Layout';
+import Loader from '../../Components/Loader/Loader';
 
-const Home = ({ toggleTheme, theme }) => {
+const DataEffect = () => {
   // const [data, setData] = useState();
   const [data, setData] = useState([]);
   const [loading, setLoading ] = useState(true);
@@ -42,10 +41,8 @@ const Home = ({ toggleTheme, theme }) => {
     return filterData;
   }
 
-
-  
   return (
-    <Layout toggleTheme={toggleTheme} theme={theme}>
+    <>
     <input type="text"
     value={search}
     placeholder='Search by titile'
@@ -79,8 +76,13 @@ const Home = ({ toggleTheme, theme }) => {
     </div>
       )
     }
-    </Layout>
-  );
+    </>
+  )
 }
 
-export default Home;
+export default DataEffect
+
+
+// function name and variable name is same????
+// chaimocha helmet
+// jest 
