@@ -49,24 +49,24 @@ const Header = ({ toggleTheme, theme }) => {
           <Navbar.Collapse id="navbarScroll">
           <Col className="me-auto my-2 my-lg-0"
                 style={{ maxHeight: '100px' }}
-                navbarScroll>
+                >
           <Nav>
           <NavDropdown title={<>Account<IoEnterOutline /></>} id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#action3">Sign in</NavDropdown.Item>
-                  <NavDropdown.Item href="#action3">New Customer?</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/signup">Sign in</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/signup" href="#action3">New Customer?</NavDropdown.Item>
                 </NavDropdown>
               </Nav>  
           </Col>
           <Col className="me-auto my-2 my-lg-0"
                 style={{ maxHeight: '100px' }}
-                navbarScroll>
+                >
           <Nav>
             <Nav.Link href="#action1">Cart<FaShoppingCart/></Nav.Link>
           </Nav>  
           </Col>
           <Col sm={4} className="me-auto my-2 my-lg-0"
                 style={{ maxHeight: '100px' }}
-                navbarScroll>
+                >
           <Form className="d-flex">
                 <Form.Control
                   type="search"
@@ -79,7 +79,7 @@ const Header = ({ toggleTheme, theme }) => {
           </Col>
           <Col className="me-auto my-2 my-lg-0 d-flex justify-content-center"
                 style={{ maxHeight: '100px'}}
-                navbarScroll>
+                >
                   <Button 
                   style={{borderRadius:"360px"}}
                     onClick={toggleTheme}

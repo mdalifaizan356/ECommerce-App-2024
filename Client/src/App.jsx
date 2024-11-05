@@ -6,6 +6,7 @@ import Contact from './Pages/Contact/Contact';
 import Policies from './Pages/Policies/Policies';
 import PNF from './Pages/PNF/PNF';
 import './App.css';
+import SignUp from './Pages/SignUp/SignUp';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -24,6 +25,7 @@ function App() {
       <Route path='/about' element={<About toggleTheme={toggleTheme} theme={theme} />} />
       <Route path='/contact' element={<Contact toggleTheme={toggleTheme} theme={theme} />} />
       <Route path='/policies' element={<Policies toggleTheme={toggleTheme} theme={theme} />} />
+      <Route path='/signup' element={<SignUp toggleTheme={toggleTheme} theme={theme} />} />
       <Route path='*' element={<PNF />} />
     </Routes>
   );
