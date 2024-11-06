@@ -7,6 +7,8 @@ import Policies from './Pages/Policies/Policies';
 import SignUp from './Pages/SignUp/SignUp';
 import Registration from './Pages/Registration/Registration';
 import PNF from './Pages/PNF/PNF';
+import SingleProduct from './Pages/SingleProduct/SingleProduct';
+
 import './App.css';
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
       <Route path='/signup' element={<SignUp toggleTheme={toggleTheme} theme={theme} />} />
       <Route path='/registration' element={<Registration toggleTheme={toggleTheme} theme={theme} />} />
       <Route path='*' element={<PNF />} />
+      <Route path="/product/:productdetails" element={<SingleProduct />} />
     </Routes>
   );
 }

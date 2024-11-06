@@ -1,0 +1,9 @@
+.Card-Container{
+    border: 1px solid blue;
+    margin: "10px";
+    padding: "10px";
+    width: 20rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

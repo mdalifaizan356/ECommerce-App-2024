@@ -76,108 +76,51 @@ Client:
 
 <BrowserRouter> ki help se routing ki functionality enable hoti he.
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Container, Row, Col } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "./Header.css";
-import '../../../../public/logo.jpeg';
 
-const Header = () => {
-  const containerStyle = {
-    // position: "fixed",
-    top: "0px",
-    width: "100%",
-    backgroundColor: "#E9EED9",
-    zIndex: 1000,
-  };
 
-  return (
-    <>
-      <Container fluid style={containerStyle} className="headerContainer">
-        <Row className='headerBox'>
-          <Col className="contactBar">
-                <div className="emailLink">
-                  <a><i className="fa-solid fa-envelope"> cpbagagency@gmail.com</i></a>
-                </div>
-                <div className="socialLink">
-                    <a>Follow Us</a>
-                    <a href=""><i className="fa-brands fa-facebook"></i></a>
-                    <a href=""><i className="fa-brands fa-whatsapp"></i></a>
-                    <a href=""><i className="fa-brands fa-twitter"></i></a>
-                    <a href=""><i className="fa-brands fa-youtube"></i></a>
-                    <a href=""><i className="fa-brands fa-linkedin-in"></i></a>
-                    <a href=""><i className="fa-brands fa-instagram"></i></a>
-                    <a href=""><i className="fa-brands fa-pinterest"></i></a>
-                </div>
-          </Col>
-        </Row>
 
-        <Row>
-          <Col className="logoANDLogin">
-                <div className="logo">
-                <img src="/logo.jpeg" alt="logo" />
-                    <h1>CP BagEgency</h1>
-                </div>
-                <div className="login">
-                    <div className="PhIcon">
-                        <i className="fa-solid fa-phone"></i>
-                    </div>
-                    <div className="PhNo">
-                        <h4>+91 9887370536</h4>
-                    </div>
-                    <div className="LoginBtn">
-                        <button>
-                            <a href="./Common/Ragistration.php">
-                                Enter
-                                <i className="fa-solid fa-right-to-bracket"></i>
-                            </a>
-                        </button>
-                    </div>
-                </div>
-          </Col>
-        </Row>
+<input type="text"
+value={search}
+placeholder='Search by titile'
+onChange={(e)=>setSearch(e.target.value)}
+/>
 
-        <Row>
-          <Col>
-          <div className="navContainer">
-                <nav id="nav">
-                <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Course</a></li>
-                        <li><a href="">Admission</a></li>
-                        <li>
-                            <a href="#">Exam</a>
-                            <ul>
-                                <li><a href="">Time Table</a></li>
-                                <li><a href="">Result</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="">Academics</a>
-                            <ul>
-                                <li><a href="">Principal Message</a></li>
-                                <li><a href="">Approach</a></li>
-                                <li><a href="">Facilities</a></li>
-                                <li><a href="">School Uniform</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="">Gallery</a></li>
-                        <li><a href="">Events   </a></li>
-                        <li><a href="">News</a></li>
-                        <li><a href="">About Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </>
-  );
+<Button onClick={()=>setSort("asc")}>Low To High</Button>
+<Button onClick={()=>setSort("dec")}>High To Low</Button>
+
+{
+  loading ? (<Loader/>):(
+  //loading ? (<h1 style={{color:"red"}}>loading</h1>):(
+    <div>
+  { (
+    filterSort().map((item) => (
+      <div key={item.id} className='Card-Container'>
+      <Card style={{ width: '18rem' }}>
+      <LazyLoadImage 
+          src={item.image} 
+          style={{ width: "100px" }}
+          effect='blur'
+          // effect='black-and-white'
+          // onLoad={()=>console.log(`my `)}
+        />
+  {/* <Card.Img variant="top" src={item.image} /> */}
+  <Card.Body>
+    <Card.Title>{item.title}</Card.Title>
+    <Card.Text></Card.Text>
+  </Card.Body>
+  <ListGroup className="list-group-flush">
+    <ListGroup.Item><p>Price: ${item.price}</p></ListGroup.Item>
+  </ListGroup>
+  <Card.Body>
+    {/* <Card.Link href="#">Add to Cart</Card.Link>
+    <Card.Link href="#">Buy Now</Card.Link> */}
+    <Button className='m-2'>Add to Cart</Button>
+    <Button>Buy Now</Button>
+  </Card.Body>
+</Card>
+      </div>
+    ))
+  )}
+</div>
+  )
 }
-
-export default Header;
-
-
-
-
