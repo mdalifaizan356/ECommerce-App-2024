@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { Container, Card } from 'react-bootstrap';
+import { Container, Card, Button } from 'react-bootstrap';
+import "./SingleProduct.css"
 import Layout from '../../Components/Layout/Layout/Layout';
+import Loader from '../../Components/Loader/Loader';
 
 const SingleProduct = () => {
-  const { productId } = useParams(); // Get product ID from URL
+  const { productdetails } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -18,17 +20,20 @@ const SingleProduct = () => {
     fetchProduct();
   }, [productdetails]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loader/>;
 
   return (
     <Layout>
-        <Container>
+        <Container className='d-flex justify-content-center'>
             <Card>
-                <Card.Img variant="top" src={product.image} alt={product.title} />
+                <Card.Img variant="top" src={product.image} alt={product.title}  style={{ width: "100px" }}/>
                 <Card.Body>
-                <Card.Title>{product.title}</Card.Title>
-                <Card.Text>{product.description}</Card.Text>
-                <Card.Text><strong>Price:</strong> ${product.price}</Card.Text>
+                    <Card.Title>{product.title}</Card.Title>
+                    <Card.Text>{product.description}</Card.Text>
+                    <Card.Text><strong>Price:</strong> ${product.price}</Card.Text>
+                    <Card.Text>${product.category}</Card.Text>
+                    <Button className='m-2'>Add to Cart</Button>
+                    <Button>Buy Now</Button>
                 </Card.Body>
                 </Card>
         </Container>

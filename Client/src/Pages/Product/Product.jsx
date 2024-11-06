@@ -4,8 +4,9 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import Loader from '../../Components/Loader/Loader';
-import { Container, Row, Col, Button, Card, ListGroup} from 'react-bootstrap';
+import { Container, Row, Col, Card, ListGroup} from 'react-bootstrap';
 import "./Product.css";
+
 
 const Product = () => {
   // const [data, setData] = useState();
@@ -69,10 +70,7 @@ const Product = () => {
             <ListGroup className="list-group-flush">
               <ListGroup.Item><p>Price: ${item.price}</p></ListGroup.Item>
             </ListGroup>
-            <Card.Body>
-              <Button className='m-2'>Add to Cart</Button>
-              <Button>Buy Now</Button>
-            </Card.Body>
+            
           </Card>
           </Link>
           </Col>
